@@ -3,13 +3,12 @@ import funtions
 todos =funtions.get_todos()
 def add_todo():
     todo1 = st.session_state["new_todo"]
-    todos.append(todo1+"\n")
+    todos.append(todo1.capitalize() +"\n")
     funtions.write_todos(todos)
 
 
 
-st.title("My todo App")
-st.subheader("This is subheader")
+st.title("My Daily Task")
 
 for index,todo in enumerate(todos):
     checkbox = st.checkbox(todo,key=todo)
